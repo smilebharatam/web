@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Bharatham | India's Premier Dental Infrastructure</title>
+    <meta name="description" content="Smile Bharatham is architecting India’s most structured, technology-integrated, and investment-ready dental healthcare network.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#000080',
+                        saffron: '#FF9933',
+                        paper: '#F5F5F0',
+                        'india-green': '#138808',
+                        gold: '#D4AF37',
+                        cream: '#FFFDD0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 20s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'scan': 'scan 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        scan: {
+                            '0%, 100%': { top: '0%' },
+                            '50%': { top: '100%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+        .vertical-rl { writing-mode: vertical-rl; }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        .animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
+        
+        html { scroll-behavior: smooth; }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-paper font-sans selection:bg-saffron selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-8">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-navy rounded-2xl flex items-center justify-center text-white shadow-lg shadow-navy/20 group-hover:scale-105 transition-transform duration-300">
+                    <i data-lucide="smile" class="text-saffron w-6 h-6"></i>
+                </div>
+                <div class="flex flex-col items-start leading-none">
+                    <span id="nav-logo-text" class="text-2xl font-display font-black tracking-tighter text-white">
+                        SMILE <span class="text-saffron">BHARATHAM</span>
+                    </span>
+                    <span id="nav-sub-text" class="text-[10px] font-bold tracking-[0.3em] uppercase mt-1 text-white/60">
+                        Dental Infrastructure
+                    </span>
+                </div>
+            </a>
+            
+            <div id="nav-links" class="hidden lg:flex items-center gap-10 font-medium text-sm uppercase tracking-widest text-white/90">
+                <a href="#about" class="hover:text-saffron transition-colors relative group">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-saffron transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#models" class="hover:text-saffron transition-colors relative group">
+                    Models
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-saffron transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#patients" class="hover:text-saffron transition-colors relative group">
+                    Patients
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-saffron transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="bg-navy text-white px-8 py-3 rounded-full hover:bg-navy/90 transition-all shadow-xl shadow-navy/20 font-bold text-xs">
+                    PARTNER WITH US
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden bg-navy">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop" alt="Modern Dental Infrastructure" class="w-full h-full object-cover opacity-20 scale-105 animate-pulse-slow object-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/80 to-navy"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-navy/40 to-navy/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-20 grid lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 text-saffron text-xs font-black tracking-[0.2em] uppercase mb-8 border border-white/10 backdrop-blur-md">
+                    <div class="w-2 h-2 rounded-full bg-saffron animate-pulse"></div>
+                    India's Premier Dental Infrastructure
+                </div>
+                <h1 class="text-6xl md:text-8xl font-display font-black text-white leading-[0.9] mb-8 tracking-tighter">
+                    THE FUTURE OF <br>
+                    <span class="text-saffron relative inline-block">DENTAL CARE</span> <br>
+                    IS HERE.
+                </h1>
+                <p class="text-xl text-white/60 mb-12 max-w-xl leading-relaxed font-light tracking-wide">
+                    Smile Bharatham is architecting India’s most <span class="text-white font-medium italic serif-italic">structured, technology-integrated</span>, and investment-ready dental healthcare network.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <a href="#models" class="bg-saffron text-white px-10 py-5 rounded-full text-sm font-black uppercase tracking-widest hover:bg-white hover:text-navy transition-all duration-500 flex items-center gap-3 group shadow-2xl shadow-saffron/20">
+                        Explore Models <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300"></i>
+                    </a>
+                    <a href="#patients" class="bg-white/5 backdrop-blur-xl text-white border border-white/10 px-10 py-5 rounded-full text-sm font-black uppercase tracking-widest hover:bg-white/10 transition-all duration-500">
+                        Patient Portal
+                    </a>
+                </div>
+
+                <div class="mt-20 grid grid-cols-3 gap-8 border-t border-white/10 pt-10">
+                    <div>
+                        <p class="text-3xl font-display font-black text-white">30%</p>
+                        <p class="text-[10px] text-white/40 uppercase tracking-widest font-bold mt-1">Cost Reduction</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-display font-black text-white">100+</p>
+                        <p class="text-[10px] text-white/40 uppercase tracking-widest font-bold mt-1">Partner Clinics</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-display font-black text-white">24/7</p>
+                        <p class="text-[10px] text-white/40 uppercase tracking-widest font-bold mt-1">Digital Support</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 p-2 rounded-[3rem] border border-white/10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm shadow-2xl">
+                    <div class="overflow-hidden rounded-[2.8rem] relative group">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop" alt="Dental Professional" class="w-full h-[600px] object-cover hover:scale-105 transition-transform duration-1000">
+                        <div class="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-saffron to-transparent shadow-[0_0_15px_rgba(242,125,38,0.8)] animate-scan pointer-events-none"></div>
+                    </div>
+                    
+                    <div class="absolute -bottom-10 -right-10 bg-white p-8 rounded-3xl shadow-2xl border border-navy/5 max-w-[260px]">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-india-green/10 text-india-green rounded-2xl flex items-center justify-center">
+                                <i data-lucide="trending-up" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-display font-black text-navy leading-none">ROI</p>
+                                <p class="text-[10px] text-navy/40 uppercase tracking-widest font-bold">Optimized</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-navy/60 leading-relaxed font-medium">Transforming independent practices into scalable, highly profitable ecosystems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="about" class="py-32 bg-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="space-y-12">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-[1px] w-12 bg-saffron"></div>
+                            <h2 class="text-xs font-black text-saffron uppercase tracking-[0.4em]">Our Vision</h2>
+                        </div>
+                        <h3 class="text-5xl md:text-6xl font-display font-black text-navy leading-[1.1] tracking-tighter">
+                            ARCHITECTING THE <br>
+                            <span class="text-gold italic serif-italic">Future of Smiles.</span>
+                        </h3>
+                        <p class="mt-8 text-lg text-navy/60 leading-relaxed font-light max-w-lg">
+                            To build India’s most trusted, profitable, and technology-integrated dental network, setting a global benchmark in healthcare infrastructure.
+                        </p>
+                    </div>
+                    
+                    <div class="p-10 bg-white rounded-[2.5rem] shadow-2xl shadow-navy/5 border border-navy/5 relative overflow-hidden group">
+                        <h2 class="text-xs font-black text-india-green uppercase tracking-[0.4em] mb-8 relative z-10">Our Mission</h2>
+                        <ul class="space-y-8 relative z-10">
+                            <li class="flex items-center gap-5 group/item">
+                                <div class="w-10 h-10 bg-india-green/5 text-india-green rounded-xl flex items-center justify-center shrink-0 group-hover/item:bg-india-green group-hover/item:text-white transition-all duration-300">
+                                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                                </div>
+                                <p class="text-navy/80 font-bold tracking-tight text-lg">Reduce operating costs by up to 30%</p>
+                            </li>
+                            <li class="flex items-center gap-5 group/item">
+                                <div class="w-10 h-10 bg-india-green/5 text-india-green rounded-xl flex items-center justify-center shrink-0 group-hover/item:bg-india-green group-hover/item:text-white transition-all duration-300">
+                                    <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                                </div>
+                                <p class="text-navy/80 font-bold tracking-tight text-lg">Increase clinic profitability & conversion</p>
+                            </li>
+                            <li class="flex items-center gap-5 group/item">
+                                <div class="w-10 h-10 bg-india-green/5 text-india-green rounded-xl flex items-center justify-center shrink-0 group-hover/item:bg-india-green group-hover/item:text-white transition-all duration-300">
+                                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                                </div>
+                                <p class="text-navy/80 font-bold tracking-tight text-lg">Create structured investment opportunities</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="aspect-[4/5] bg-white rounded-[4rem] shadow-2xl overflow-hidden border-[12px] border-white relative z-10">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop" alt="Modern Clinic" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-saffron rounded-[3rem] -z-10 animate-float"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Models -->
+    <section id="models" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-[1px] w-12 bg-saffron"></div>
+                        <h2 class="text-xs font-black text-saffron uppercase tracking-[0.4em]">Business Models</h2>
+                    </div>
+                    <h3 class="text-5xl md:text-6xl font-display font-black text-navy leading-none tracking-tighter">
+                        STRATEGIC <br>
+                        <span class="text-gold italic serif-italic">Partnerships.</span>
+                    </h3>
+                </div>
+                <p class="text-lg text-navy/60 max-w-sm leading-relaxed font-light">
+                    Tailored solutions for existing practitioners, new clinic owners, and visionary healthcare investors.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-10">
+                <!-- Model 1 -->
+                <div class="bg-navy text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden group min-h-[600px] flex flex-col transition-all duration-500 hover:-translate-y-4">
+                    <div class="absolute top-10 right-10 text-8xl font-display font-black opacity-5">01</div>
+                    <div class="mb-10 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/10">
+                        <i data-lucide="zap" class="w-8 h-8 text-saffron"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xs font-black uppercase tracking-[0.3em] mb-3 opacity-60">Non-Equity Upgrade</h4>
+                        <h5 class="text-3xl font-display font-black mb-8 leading-tight">Clinic Transformation</h5>
+                        <div class="space-y-8">
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-3">Target Audience</p>
+                                <p class="font-bold text-lg leading-tight">Independent Clinic Owners</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-4">Core Provisions</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>25–30% reduction in lab expenses</li>
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Bulk consumable procurement</li>
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Specialist referral network</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 2 -->
+                <div class="bg-saffron text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden group min-h-[600px] flex flex-col transition-all duration-500 hover:-translate-y-4">
+                    <div class="absolute top-10 right-10 text-8xl font-display font-black opacity-5">02</div>
+                    <div class="mb-10 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/10">
+                        <i data-lucide="rocket" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xs font-black uppercase tracking-[0.3em] mb-3 opacity-60">Franchise Model</h4>
+                        <h5 class="text-3xl font-display font-black mb-8 leading-tight">New Clinic Setup</h5>
+                        <div class="space-y-8">
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-3">Target Audience</p>
+                                <p class="font-bold text-lg leading-tight">Young & NRI Dentists</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-4">Core Provisions</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Location feasibility analysis</li>
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Equipment procurement</li>
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Marketing launch strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 3 -->
+                <div class="bg-india-green text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden group min-h-[600px] flex flex-col transition-all duration-500 hover:-translate-y-4">
+                    <div class="absolute top-10 right-10 text-8xl font-display font-black opacity-5">03</div>
+                    <div class="mb-10 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/10">
+                        <i data-lucide="dollar-sign" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-xs font-black uppercase tracking-[0.3em] mb-3 opacity-60">Investment Opportunity</h4>
+                        <h5 class="text-3xl font-display font-black mb-8 leading-tight">Investor-Backed</h5>
+                        <div class="space-y-8">
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-3">Target Audience</p>
+                                <p class="font-bold text-lg leading-tight">HNIs & Real Estate Owners</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-4">Core Provisions</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Investor funds clinic setup</li>
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Smile Bharatham manages ops</li>
+                                    <li class="flex items-start gap-3 text-sm font-medium opacity-80"><div class="mt-1 w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>Financial reporting & audits</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Advantage -->
+    <section id="advantage" class="py-32 bg-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(242,125,38,0.15),transparent_50%)]"></div>
+            <div class="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_70%,rgba(52,168,83,0.15),transparent_50%)]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-20 items-center">
+                <div class="lg:col-span-5">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="h-[1px] w-12 bg-saffron"></div>
+                        <h2 class="text-xs font-black text-saffron uppercase tracking-[0.5em]">The Edge</h2>
+                    </div>
+                    <h3 class="text-5xl md:text-6xl font-display font-black text-white mb-10 leading-[0.9] tracking-tighter">
+                        OPERATIONAL <br>
+                        <span class="text-saffron italic serif-italic">Superiority.</span>
+                    </h3>
+                    <p class="text-white/60 text-xl mb-12 leading-relaxed font-light">
+                        We provide the backbone for your success. Our integrated systems allow you to focus on clinical excellence while we handle the business complexity.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 text-white/90 font-bold tracking-tight group cursor-default">
+                            <div class="w-6 h-6 bg-saffron/20 text-saffron rounded-full flex items-center justify-center shrink-0 group-hover:bg-saffron group-hover:text-navy transition-all duration-300">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-lg">Cost Efficiency</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-white/90 font-bold tracking-tight group cursor-default">
+                            <div class="w-6 h-6 bg-saffron/20 text-saffron rounded-full flex items-center justify-center shrink-0 group-hover:bg-saffron group-hover:text-navy transition-all duration-300">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-lg">Revenue Growth</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-white/90 font-bold tracking-tight group cursor-default">
+                            <div class="w-6 h-6 bg-saffron/20 text-saffron rounded-full flex items-center justify-center shrink-0 group-hover:bg-saffron group-hover:text-navy transition-all duration-300">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-lg">Quality Standards</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-white/90 font-bold tracking-tight group cursor-default">
+                            <div class="w-6 h-6 bg-saffron/20 text-saffron rounded-full flex items-center justify-center shrink-0 group-hover:bg-saffron group-hover:text-navy transition-all duration-300">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-lg">Live Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-8">
+                    <div class="p-10 bg-white/5 backdrop-blur-xl rounded-[3rem] border border-white/10 hover:border-saffron/30 transition-all duration-500 group relative overflow-hidden">
+                        <div class="w-16 h-16 bg-white/5 text-saffron rounded-2xl flex items-center justify-center mb-10 group-hover:bg-saffron group-hover:text-navy transition-all duration-500 shadow-xl shadow-black/20">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-2xl font-display font-black text-white mb-4 tracking-tight">Centralized Procurement</h4>
+                        <p class="text-white/40 text-sm leading-relaxed font-medium group-hover:text-white/60 transition-colors">Bulk purchasing power reduces material costs by up to 30% for all network partners.</p>
+                    </div>
+                    <div class="p-10 bg-white/5 backdrop-blur-xl rounded-[3rem] border border-white/10 hover:border-saffron/30 transition-all duration-500 group relative overflow-hidden">
+                        <div class="w-16 h-16 bg-white/5 text-saffron rounded-2xl flex items-center justify-center mb-10 group-hover:bg-saffron group-hover:text-navy transition-all duration-500 shadow-xl shadow-black/20">
+                            <i data-lucide="cpu" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-2xl font-display font-black text-white mb-4 tracking-tight">Digital Workflow</h4>
+                        <p class="text-white/40 text-sm leading-relaxed font-medium group-hover:text-white/60 transition-colors">Fully integrated EMR and patient management systems for seamless clinic operations.</p>
+                    </div>
+                    <div class="p-10 bg-white/5 backdrop-blur-xl rounded-[3rem] border border-white/10 hover:border-saffron/30 transition-all duration-500 group relative overflow-hidden">
+                        <div class="w-16 h-16 bg-white/5 text-saffron rounded-2xl flex items-center justify-center mb-10 group-hover:bg-saffron group-hover:text-navy transition-all duration-500 shadow-xl shadow-black/20">
+                            <i data-lucide="trending-up" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-2xl font-display font-black text-white mb-4 tracking-tight">Marketing Engine</h4>
+                        <p class="text-white/40 text-sm leading-relaxed font-medium group-hover:text-white/60 transition-colors">National brand presence and hyper-local digital marketing driving patient footfall.</p>
+                    </div>
+                    <div class="p-10 bg-white/5 backdrop-blur-xl rounded-[3rem] border border-white/10 hover:border-saffron/30 transition-all duration-500 group relative overflow-hidden">
+                        <div class="w-16 h-16 bg-white/5 text-saffron rounded-2xl flex items-center justify-center mb-10 group-hover:bg-saffron group-hover:text-navy transition-all duration-500 shadow-xl shadow-black/20">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-2xl font-display font-black text-white mb-4 tracking-tight">Quality Assurance</h4>
+                        <p class="text-white/40 text-sm leading-relaxed font-medium group-hover:text-white/60 transition-colors">Standardized clinical protocols and regular audits ensuring premier care delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Section -->
+    <section id="patients" class="py-32 bg-paper relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-24 items-start">
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-[1px] w-12 bg-india-green"></div>
+                        <h2 class="text-xs font-black text-india-green uppercase tracking-[0.4em]">Patient Care</h2>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-display font-black text-navy mb-10 leading-[0.9] tracking-tighter">
+                        QUALITY CARE <br>
+                        <span class="text-india-green italic serif-italic relative inline-block">At Your Fingertips.</span>
+                    </h1>
+                    <p class="text-navy/60 text-xl mb-16 leading-relaxed font-light max-w-2xl">
+                        Smile Bharatham brings standardized, high-quality dental treatments to your neighborhood. Our network ensures you get the best care at transparent prices.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-8 mb-12">
+                        <div class="flex gap-6 p-8 bg-white rounded-[2.5rem] shadow-xl shadow-navy/5 border border-navy/5 group hover:bg-navy hover:text-white transition-all duration-500">
+                            <div class="w-14 h-14 bg-paper rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-colors">
+                                <i data-lucide="dollar-sign" class="text-saffron w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-display font-black mb-2 tracking-tight">Transparent Pricing</h5>
+                                <p class="text-navy/40 text-xs leading-relaxed font-medium group-hover:text-white/60 transition-colors">Know the cost upfront. No surprises.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 p-8 bg-white rounded-[2.5rem] shadow-xl shadow-navy/5 border border-navy/5 group hover:bg-navy hover:text-white transition-all duration-500">
+                            <div class="w-14 h-14 bg-paper rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-colors">
+                                <i data-lucide="users" class="text-india-green w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-display font-black mb-2 tracking-tight">Top Specialists</h5>
+                                <p class="text-navy/40 text-xs leading-relaxed font-medium group-hover:text-white/60 transition-colors">Access to the best dental consultants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-white rounded-[4rem] p-12 md:p-16 shadow-2xl border border-navy/5 relative">
+                    <h4 class="text-4xl font-display font-black text-navy mb-3 tracking-tighter">Book Visit</h4>
+                    <p class="text-navy/40 text-sm mb-10 font-medium">Inquire about prices, services, or book your visit.</p>
+
+                    <div id="patient-message" class="hidden mb-6 p-4 rounded-2xl text-xs font-bold"></div>
+
+                    <form id="patient-form" class="space-y-8">
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Full Name</label>
+                            <input type="text" name="name" required class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-india-green transition-all outline-none font-medium text-navy shadow-inner" placeholder="Enter your name">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-india-green transition-all outline-none font-medium text-navy shadow-inner" placeholder="Your Phone">
+                            </div>
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Service</label>
+                                <select name="service" required class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-india-green transition-all outline-none font-medium text-navy shadow-inner appearance-none">
+                                    <option>General Consultation</option>
+                                    <option>Dental Implants</option>
+                                    <option>Braces / Aligners</option>
+                                    <option>Root Canal Treatment</option>
+                                    <option>Teeth Whitening</option>
+                                    <option>Pediatric Dentistry</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Email Address</label>
+                            <input type="email" name="email" class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-india-green transition-all outline-none font-medium text-navy shadow-inner" placeholder="email@example.com">
+                        </div>
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Message / Inquiry</label>
+                            <textarea name="message" rows="4" class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-india-green transition-all outline-none font-medium text-navy shadow-inner resize-none" placeholder="Ask about price, timing, or specific concerns..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-india-green text-white py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-emerald-800 transition-all shadow-2xl shadow-india-green/20">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Different -->
+    <section class="py-32 bg-india-green text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full blur-[150px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="h-[1px] w-12 bg-white/40"></div>
+                        <h2 class="text-xs font-black text-white/60 uppercase tracking-[0.5em]">The Philosophy</h2>
+                    </div>
+                    <h3 class="text-5xl md:text-7xl font-display font-black mb-10 leading-[0.9] tracking-tighter">
+                        BEYOND <br>
+                        <span class="text-white/60 italic serif-italic">Traditional Clinics.</span>
+                    </h3>
+                    <p class="text-white/70 text-xl mb-12 leading-relaxed font-light max-w-xl">
+                        "We are not building clinics. We are building dental infrastructure." — This core belief drives every decision we make.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="flex items-center gap-5 p-6 bg-white/10 backdrop-blur-md rounded-[2rem] border border-white/20 hover:bg-white/20 transition-all cursor-default group">
+                            <div class="text-white/60 group-hover:text-white transition-colors shrink-0"><i data-lucide="globe" class="w-6 h-6"></i></div>
+                            <span class="font-black text-xs uppercase tracking-widest">Dental Ecosystem</span>
+                        </div>
+                        <div class="flex items-center gap-5 p-6 bg-white/10 backdrop-blur-md rounded-[2rem] border border-white/20 hover:bg-white/20 transition-all cursor-default group">
+                            <div class="text-white/60 group-hover:text-white transition-colors shrink-0"><i data-lucide="zap" class="w-6 h-6"></i></div>
+                            <span class="font-black text-xs uppercase tracking-widest">Cost Optimization</span>
+                        </div>
+                        <div class="flex items-center gap-5 p-6 bg-white/10 backdrop-blur-md rounded-[2rem] border border-white/20 hover:bg-white/20 transition-all cursor-default group">
+                            <div class="text-white/60 group-hover:text-white transition-colors shrink-0"><i data-lucide="trending-up" class="w-6 h-6"></i></div>
+                            <span class="font-black text-xs uppercase tracking-widest">Revenue Platform</span>
+                        </div>
+                        <div class="flex items-center gap-5 p-6 bg-white/10 backdrop-blur-md rounded-[2rem] border border-white/20 hover:bg-white/20 transition-all cursor-default group">
+                            <div class="text-white/60 group-hover:text-white transition-colors shrink-0"><i data-lucide="briefcase" class="w-6 h-6"></i></div>
+                            <span class="font-black text-xs uppercase tracking-widest">Investment Model</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="p-12 md:p-16 bg-white rounded-[4rem] shadow-2xl text-navy relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-india-green/5 rounded-full -mr-20 -mt-20"></div>
+                        <h4 class="text-xs font-black text-india-green uppercase tracking-[0.4em] mb-10">Future Integration</h4>
+                        <ul class="space-y-10">
+                            <li class="flex gap-8 group">
+                                <div class="w-14 h-14 bg-india-green/5 text-india-green rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-india-green group-hover:text-white transition-all duration-500 shadow-lg shadow-india-green/5">
+                                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-xl font-display font-black mb-2 tracking-tight">Digital Clinic Management</h5>
+                                    <p class="text-navy/40 text-sm leading-relaxed font-medium">Live performance dashboards and referral tracking for complete visibility.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-8 group">
+                                <div class="w-14 h-14 bg-india-green/5 text-india-green rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-india-green group-hover:text-white transition-all duration-500 shadow-lg shadow-india-green/5">
+                                    <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-xl font-display font-black mb-2 tracking-tight">Inventory Analytics</h5>
+                                    <p class="text-navy/40 text-sm leading-relaxed font-medium">AI-assisted case planning and supply chain optimization to reduce waste.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-8 group">
+                                <div class="w-14 h-14 bg-india-green/5 text-india-green rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-india-green group-hover:text-white transition-all duration-500 shadow-lg shadow-india-green/5">
+                                    <i data-lucide="zap" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-xl font-display font-black mb-2 tracking-tight">Technology Advantage</h5>
+                                    <p class="text-navy/40 text-sm leading-relaxed font-medium">Long-term edge through integrated digital systems and shared innovation.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-paper relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-navy"></div>
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <div class="bg-white rounded-[4rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row border border-navy/5">
+                <div class="lg:w-2/5 bg-navy p-12 md:p-20 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="h-[1px] w-12 bg-saffron"></div>
+                            <h2 class="text-xs font-black text-saffron uppercase tracking-[0.5em]">Connect</h2>
+                        </div>
+                        <h3 class="text-5xl font-display font-black mb-10 leading-[0.9] tracking-tighter">
+                            PARTNER <br>
+                            <span class="text-saffron italic serif-italic">With Us.</span>
+                        </h3>
+                        <p class="text-white/60 text-lg mb-16 leading-relaxed font-light">
+                            Join India's most structured dental healthcare network. Whether you're a doctor or an investor, we have a model for you.
+                        </p>
+                        
+                        <div class="space-y-12">
+                            <div class="flex items-center gap-8 group">
+                                <div class="w-16 h-16 bg-white/5 text-saffron rounded-3xl flex items-center justify-center group-hover:bg-saffron group-hover:text-navy transition-all duration-500 shadow-xl">
+                                    <i data-lucide="mail" class="w-7 h-7"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] opacity-40 uppercase tracking-[0.3em] font-black mb-1">Email Us</p>
+                                    <p class="text-xl font-display font-black tracking-tight">support@smilebharatham.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-8 group">
+                                <div class="w-16 h-16 bg-white/5 text-saffron rounded-3xl flex items-center justify-center group-hover:bg-saffron group-hover:text-navy transition-all duration-500 shadow-xl">
+                                    <i data-lucide="phone" class="w-7 h-7"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] opacity-40 uppercase tracking-[0.3em] font-black mb-1">Call Us</p>
+                                    <p class="text-xl font-display font-black tracking-tight">+91 96001 96088</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-3/5 p-12 md:p-20 bg-white">
+                    <div id="partner-message" class="hidden mb-10 p-6 rounded-[2rem] text-sm font-bold"></div>
+                    <form id="partner-form" class="space-y-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Full Name</label>
+                                <input type="text" name="name" required class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-saffron transition-all outline-none font-medium text-navy shadow-inner" placeholder="Enter Name">
+                            </div>
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-saffron transition-all outline-none font-medium text-navy shadow-inner" placeholder="Enter Phone Number">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Email Address</label>
+                                <input type="email" name="email" required class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-saffron transition-all outline-none font-medium text-navy shadow-inner" placeholder="email@example.com">
+                            </div>
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Interest</label>
+                                <select name="interest" required class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-saffron transition-all outline-none font-medium text-navy shadow-inner appearance-none">
+                                    <option>Existing Clinic Upgrade</option>
+                                    <option>New Franchise</option>
+                                    <option>Investor Model</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] ml-4">Message</label>
+                            <textarea name="message" rows="4" class="w-full bg-paper border-transparent rounded-2xl px-8 py-5 focus:bg-white focus:ring-2 focus:ring-saffron transition-all outline-none font-medium text-navy shadow-inner resize-none" placeholder="Tell us more about your interest..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-saffron text-white py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-orange-600 transition-all shadow-2xl shadow-saffron/20">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy pt-32 pb-16 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-20 mb-24">
+                <div class="lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-10">
+                        <div class="w-12 h-12 bg-saffron rounded-2xl flex items-center justify-center text-white shadow-lg shadow-saffron/20">
+                            <i data-lucide="smile" class="w-7 h-7"></i>
+                        </div>
+                        <span class="text-3xl font-display font-black tracking-tighter">
+                            Smile <span class="text-saffron italic serif-italic">Bharatham</span>
+                        </span>
+                    </div>
+                    <p class="text-white/40 text-lg mb-12 max-w-md leading-relaxed font-medium">
+                        Building India’s most trusted, profitable, and technology-integrated dental network. Empowering doctors, serving patients.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-black text-white/40 uppercase tracking-[0.4em] mb-10">Headquarters</h4>
+                    <ul class="space-y-6 text-white/60 font-medium">
+                        <li class="flex gap-4"><i data-lucide="globe" class="text-saffron w-5 h-5"></i><span>Chennai, Tamil Nadu, India</span></li>
+                        <li class="flex gap-4"><i data-lucide="mail" class="text-saffron w-5 h-5"></i><span>support@smilebharatham.com</span></li>
+                        <li class="flex gap-4"><i data-lucide="phone" class="text-saffron w-5 h-5"></i><span>+91 96001 96088</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-white/5 text-center text-white/20 text-[10px] font-black uppercase tracking-[0.3em]">
+                <p>© 2026 Smile Bharatham. Premier Dental Infrastructure.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <div class="fixed bottom-8 right-8 z-50 flex flex-col gap-4">
+        <a href="https://wa.me/919600196088" target="_blank" class="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('nav-logo-text');
+        const subText = document.getElementById('nav-sub-text');
+        const navLinks = document.getElementById('nav-links');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/80', 'backdrop-blur-xl', 'py-4', 'shadow-sm', 'border-b', 'border-navy/5');
+                navbar.classList.remove('bg-transparent', 'py-8');
+                logoText.classList.add('text-navy');
+                logoText.classList.remove('text-white');
+                subText.classList.add('text-navy/60');
+                subText.classList.remove('text-white/60');
+                navLinks.classList.add('text-navy/80');
+                navLinks.classList.remove('text-white/90');
+            } else {
+                navbar.classList.remove('bg-white/80', 'backdrop-blur-xl', 'py-4', 'shadow-sm', 'border-b', 'border-navy/5');
+                navbar.classList.add('bg-transparent', 'py-8');
+                logoText.classList.remove('text-navy');
+                logoText.classList.add('text-white');
+                subText.classList.remove('text-navy/60');
+                subText.classList.add('text-white/60');
+                navLinks.classList.remove('text-navy/80');
+                navLinks.classList.add('text-white/90');
+            }
+        });
+
+        // Form Submission Logic
+        const handleFormSubmit = async (formId, messageId, endpoint) => {
+            const form = document.getElementById(formId);
+            const messageDiv = document.getElementById(messageId);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // Reset message
+                messageDiv.classList.add('hidden');
+                messageDiv.classList.remove('bg-green-50', 'text-green-600', 'bg-red-50', 'text-red-600', 'border', 'border-green-100', 'border-red-100');
+                
+                // Loading state
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Processing...';
+
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data),
+                    });
+
+                    if (response.ok) {
+                        messageDiv.innerText = 'Success! Your inquiry has been sent.';
+                        messageDiv.classList.add('bg-green-50', 'text-green-600', 'border', 'border-green-100');
+                        messageDiv.classList.remove('hidden');
+                        form.reset();
+                    } else {
+                        const err = await response.json();
+                        throw new Error(err.error || 'Something went wrong');
+                    }
+                } catch (err) {
+                    messageDiv.innerText = err.message || 'Failed to connect to server';
+                    messageDiv.classList.add('bg-red-50', 'text-red-600', 'border', 'border-red-100');
+                    messageDiv.classList.remove('hidden');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = originalBtnText;
+                }
+            });
+        };
+
+        // Initialize Forms
+        const API_BASE_URL = 'https://ais-dev-bs2sycqnaezjp6jei5gfy2-344921052706.asia-southeast1.run.app';
+        handleFormSubmit('patient-form', 'patient-message', `${API_BASE_URL}/api/patient-inquiry`);
+        handleFormSubmit('partner-form', 'partner-message', `${API_BASE_URL}/api/partner`);
+    </script>
+</body>
+</html>
